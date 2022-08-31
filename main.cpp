@@ -13,13 +13,18 @@
 using namespace std;
 
 int sum(int number);
+int productA (int number);
 
 int main() {
   int n = 0;
   cout << "Please enter a number: ";
   cin >> n;
  int total = sum(n);
+  productA(n);
+ 
  cout << "The sum of the numbers from 1 to your number is: " << total << endl;
+
+ 
   return 0;
 }
 
@@ -33,3 +38,12 @@ int sum (int number) {
 return tot;
 }
 
+int productA(int number) {
+  int prod = 0;
+  for (int i = 1; i <= number; i++) {
+
+    prod = number * i;
+    cout << "The product of " << number << " and " << i << " is: " << prod << endl;
+  }
+  return prod;
+}
